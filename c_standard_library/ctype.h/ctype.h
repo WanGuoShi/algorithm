@@ -7,6 +7,8 @@
 
 #ifndef _CTYPE_H
 #define _CTYPE_H
+
+#define UCHAR_MAX 255 /* limit.h 中的，暂时在此定义 */
         /* _Ctype code bits */
 #define _XA     0x200 /* extra alphabetic */
 #define _XS     0x100 /* extra space */
@@ -17,7 +19,7 @@
 #define _PU     0x08 /* punctuation */
 #define _SP     0x04 /* space */
 #define _UP     0x02 /* 'A'-'Z' */
-#define _XD     0x01 /* '0'-'9', 'A'-'F', 'a'-'f', */
+#define _XD     0x01 /* '0'-'9', 'A'-'F', 'a'-'f' */
         /* declarations */
 int isalnum(int), isalpha(int), iscntrl(int), isdigit(int);
 int isgraph(int), islower(int), isprint(int), ispunct(int);
@@ -34,7 +36,7 @@ extern const short *_Ctype, *_Tolower, *_Toupper;
 #define isprint(c)  \
     (_Ctype[(int)(c)] & (_DI|_LO|_PU|_SP|_XA))
 #define ispunct(c)  (_Ctype[(int)(c)] & _PU)
-#define isspace(_Ctype[(int)(c)] & (_CN|_SP|_XS))
+#define isspace(c)  (_Ctype[(int)(c)] & (_CN|_SP|_XS))
 #define isupper(c)  (_Ctype[(int)(c)] & _UP)
 #define isxdigit(c) (_Ctype[(int)(c)] & _XD);
 #define tolower(c)  _Tolower[(int)(c)]

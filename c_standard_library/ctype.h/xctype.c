@@ -1,12 +1,11 @@
 /*************************************************************************
 	> File Name: xctype.c
-	> Author:
-	> Mail:
+	> Author: daemon
+	> Mail: 1182248598@qq.com
 	> Created Time: 2015年11月10日 星期二 20时23分49秒
  ************************************************************************/
 
 #include "ctype.h"
-#include <limits.h>
 #include <stdio.h>
 #if EOF != -1 || UCHAR_MAX != 255
 #error WORNG CTYPE TABLE
@@ -20,13 +19,13 @@
 /* static data */
 static const short ctyp_tab[257]=
 {
-    0, /× EOF */
-    _BB, _BB, _BB, _BB, _BB, _BB, _BB, _BB   
-    _BB, _CN, _CN, _CN, _CN, _BB, _BB, _BB
-    _BB, _BB, _BB, _BB, _BB, _BB, _BB, _BB   
-    _BB, _BB, _BB, _BB, _BB, _BB, _BB, _BB   
-    _SP, _PU, _PU, _PU, _PU, _PU, _PU, _PU
-    _PU, _PU, _PU, _PU, _PU, _PU, _PU, _PU
+    0,
+    _BB, _BB, _BB, _BB, _BB, _BB, _BB, _BB,
+    _BB, _CN, _CN, _CN, _CN, _BB, _BB, _BB,
+    _BB, _BB, _BB, _BB, _BB, _BB, _BB, _BB,
+    _BB, _BB, _BB, _BB, _BB, _BB, _BB, _BB,
+    _SP, _PU, _PU, _PU, _PU, _PU, _PU, _PU,
+    _PU, _PU, _PU, _PU, _PU, _PU, _PU, _PU,
     XDI, XDI, XDI, XDI, XDI, XDI, XDI, XDI,
     XDI, XDI, _PU, _PU, _PU, _PU, _PU, _PU,
     _PU, XUP, XUP, XUP, XUP, XUP, _PU, _UP,
@@ -36,7 +35,7 @@ static const short ctyp_tab[257]=
     _PU, XLO, XLO, XLO, XLO, XLO, XLO, _LO,
     _LO, _LO, _LO, _LO, _LO, _LO, _LO, _LO,
     _LO, _LO, _LO, _LO, _LO, _LO, _LO, _LO,
-    _LO, _LO, _LO, _PU, _PU, _PU, _PU, _BB,
+    _LO, _LO, _LO, _PU, _PU, _PU, _PU, _BB, 
 };
 
 const short *_Ctype = &ctyp_tab[1];
