@@ -38,7 +38,7 @@ extern const short *_Ctype, *_Tolower, *_Toupper;
 #define ispunct(c)  (_Ctype[(int)(c)] & _PU)
 #define isspace(c)  (_Ctype[(int)(c)] & (_CN|_SP|_XS))
 #define isupper(c)  (_Ctype[(int)(c)] & _UP)
-#define isxdigit(c) (_Ctype[(int)(c)] & _XD);
+#define isxdigit(c) (_Ctype[(int)(c)] & _XD)
 #define tolower(c)  _Tolower[(int)(c)]
 #define toupper(c)  _Toupper[(int)(c)]
 #endif
