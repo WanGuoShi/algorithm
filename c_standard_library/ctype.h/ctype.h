@@ -34,7 +34,7 @@ extern const short *_Ctype, *_Tolower, *_Toupper;
 #define isgraph(c)  (_Ctype[(int)(c)] & (_DI|_LO|_PU|_UP|_XA))
 #define islower(c)  (_Ctype[(int)(c)] & _LO)
 #define isprint(c)  \
-    (_Ctype[(int)(c)] & (_DI|_LO|_PU|_SP|_XA))
+    (_Ctype[c] & (_DI|_LO|_PU|_SP|_UP|_XA))
 #define ispunct(c)  (_Ctype[(int)(c)] & _PU)
 #define isspace(c)  (_Ctype[(int)(c)] & (_CN|_SP|_XS))
 #define isupper(c)  (_Ctype[(int)(c)] & _UP)

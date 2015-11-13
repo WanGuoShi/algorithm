@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
     }
     for(s = "abcdefABCDEF"; *s; ++s)
     {
-       // assert(isxdigit(*s));
+        assert(isxdigit(*s));
     }
     for(s = "abcdefghijkmnopqrstuvwxyz"; *s; ++s)
     {
@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
     }
     for(s = "ABCDEFGHIJKMNOPQRSTUVWXYZ"; *s; ++s)
     {
-        //assert(isupper(*s));
+        assert(isupper(*s));
     }
     for(s = "!\"#%&'();<=>?[\\]*+,-./:^_{|}~"; *s; ++s)
     {
@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
     }
     for(s = "\f\n\r\t\v"; *s; ++s)
     {
-       // assert(isspace(*s));
+        assert(isspace(*s));
     }
     assert(isspace(' ') && isprint(' '));
     assert(iscntrl('\a') && iscntrl('\b'));
@@ -92,7 +92,7 @@ int main(int argc, char *argv[])
         }
         if(isgraph(c))
         {
-           // assert(isprint(c));
+            assert(isprint(c));
         }
         if(isspace(c))
         {
@@ -110,7 +110,7 @@ int main(int argc, char *argv[])
     }
     for(s = "abcdefABCDEF"; *s; ++s)
     {
-        //assert((isxdigit)(*s));
+        assert((isxdigit)(*s));
     }
     for(s = "abcdefghijkmnopqrstuvwxyz"; *s; ++s)
     {
@@ -118,7 +118,7 @@ int main(int argc, char *argv[])
     }
     for(s = "ABCDEFGHIJKMNOPQRSTUVWXYZ"; *s; ++s)
     {
-       // assert((isupper)(*s));
+        assert((isupper)(*s));
     }
     for(s = "!\"#%&'();<=>?[\\]*+,-./:^_{|}~"; *s; ++s)
     {
@@ -126,7 +126,7 @@ int main(int argc, char *argv[])
     }
     for(s = "\f\n\r\t\v"; *s; ++s)
     {
-        //assert((isspace)(*s));
+        assert((isspace)(*s));
     }
     assert((isspace)(' ') && (isprint)(' '));
     assert((iscntrl)('\a') && (iscntrl)('\b'));
