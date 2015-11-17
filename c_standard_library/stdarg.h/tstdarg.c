@@ -7,12 +7,12 @@
 
 #include <assert.h>
 #include "stdarg.h"
-#include <stdio.h>
+//#include <stdio.h>
 
 /* type definitions */
 typedef struct
 {
-    char ;
+    char c;
 } Cstruct;
 
 /* test variable argument list */
@@ -33,10 +33,10 @@ static int tryit(const char *fmt, ...)
             assert(va_arg(ap, double) == ++ctr);
             break;
         case 'p':
-            assert(va_arg(ap, char *) == ++ctr);
+            assert(va_arg(ap, char *)[0] == ++ctr);
             break;
         case 's':
-            assert(va_arg(ap, Cstruct) == ++ctr);
+            assert(va_arg(ap, Cstruct).c == ++ctr);
             break;
         }
     }
@@ -49,11 +49,11 @@ int main(int argc, char *argv[])
 {
     Cstruct x = {3};
 
-    assert(tryit("iisdi", '\1', 2, x, 4.0, 5) == 5);
+    //assert(tryit("iisdi", '\1', 2, x, 4.0, 5) == 5);
     assert(tryit("") == 0);
     assert(tryit("pdp", "\1", 2.0, "\3") == 3);
-    printf("sizeof (va_list) = %u\n", sizeof (va_list));
-    puts("SUCCESS testing <stdarg.h>");
+    //printf("sizeof (va_list) = %u\n", sizeof (va_list));
+    //puts("SUCCESS testing <stdarg.h>");
     return (0);
 }
 
