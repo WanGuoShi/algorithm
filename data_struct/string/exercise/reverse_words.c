@@ -7,6 +7,20 @@
 
 #include <stdio.h>
 
+void ReverseWords(char *(s[]), int from, int to);
+
+int main()
+{
+    char *(s[]) = {"I","am","a","student."};
+    ReverseWords(s, 0, 3);
+    for(int i = 0; i < 4; i++){
+        while(*s[i] != '\0'){
+            printf("%c",*s[i]++);
+        }
+        printf(" ");
+    }
+    return 0;
+}
 
 void ReverseWords(char *(s[]), int from, int to){
     char *tmp;
@@ -16,14 +30,3 @@ void ReverseWords(char *(s[]), int from, int to){
         s[to--] = tmp;
     }
 }
-
-int main()
-{
-    char *(s[]) = {"I","am","a","student."};
-    ReverseWords(s, 0, 3);
-    for(int i = 0; i < 4; i++){
-        puts(s[i]);
-    }
-    return 0;
-}
-
