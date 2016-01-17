@@ -45,14 +45,14 @@ int main()
     printf("List:");
     p=L->next;
     for(i = 1; i <= n; i++){
-        printf("%3d",p->data);
+        printf("%3d", p->data);
         p = p->next;
     }
     LeftRotateList(L, 6, 2);
     printf("\nReverse 2:");
     p=L->next;
     for(i = 1; i <= n; i++){
-        printf("%3d",p->data);
+        printf("%3d", p->data);
         p = p->next;
     }
     return 0;
