@@ -12,13 +12,13 @@ void permutation(char *s, int from, int to);
 
 int main()
 {
-    char s[] = "abc";
+    char s[] = "aba";
     permutation(s, 0, 2);
     return 0;
 }
 
 void permutation(char *s, int from, int to){
-    int i, j;
+    int i, j, k;
     if(to <= 1){
         return;
     }
