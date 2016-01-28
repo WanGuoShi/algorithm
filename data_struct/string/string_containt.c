@@ -13,7 +13,7 @@ int StringContain(char *a, char *b);
 int main()
 {
     char a[] = "ABCD";
-    char b[] = "ABE";
+    char b[] = "BA";
     if(StringContain(a, b))
     {
         printf("String %s containt String %s", a, b);

@@ -34,7 +34,6 @@ void LeftShiftOne(char *s, int n){
     s[n - 1] = t;
 }
 
-void LeftRotateString(char *s, int n, int m){
     while(m--){
         LeftShiftOne(s,n);
     }
