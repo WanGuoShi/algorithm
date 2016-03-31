@@ -15,8 +15,8 @@
 #define MASK            0x1F
 #define N               10000000
 
-int a[1 + N/BITSPERWORD];
-int x[N];
+int a[1 + N/BITSPERWORD]; 	//使用的内存空间数组，用来排序
+int x[N];                       //用来生成待排序数据集合
 
 void set(int i);
 void clr(int i);
@@ -31,12 +31,12 @@ int main(int argc, char *argv[])
     bitmap_sort();
 }
 
-void set(int i)
+void set(int i)     //设置特定位为1
 {
     a[i>>SHIFT] |= (1<<(i & MASK));
 }
 
-void clr(int i)
+void clr(int i)     //清空特定位为0
 {
     a[i>>SHIFT] &= ~(1<<(i & MASK));
 }
@@ -46,7 +46,7 @@ int test(int i)
     return a[i>>SHIFT] & (1<<(i & MASK));
 }
 
-int randint(int l, int u)
+int randint(int l, int u)     //生成l~u之间的整数
 {
     int temp;
     srand((unsigned)time(NULL));
@@ -70,7 +70,7 @@ void generate_rand_num()
     FILE *fp;
     int k = N;
     int i;
-    fp = fopen("/home/deamon/project/algorithm/sort/in.txt", "w");
+    fp = fopen("in.txt", "w");
 
     for (i = 0; i < N; i++){
         x[i] = i + 1;
@@ -90,8 +90,8 @@ void bitmap_sort()
     int i;
     FILE *in, *out;
     int num;
-    in = fopen("/home/deamon/project/algorithm/sort/in.txt", "r");
-    out = fopen("/home/deamon/project/algorithm/sort/out.txt", "w");
+    in = fopen("in.txt", "r");
+    out = fopen("out.txt", "w");
 
     generate_rand_num();
 
