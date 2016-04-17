@@ -9,7 +9,7 @@
 #include "unit_test.h"
 #include "string_to_int.h"
 START_TEST(test_str2int) {
-    fail_unless(string_to_int("123456") == 123456,
+    ck_assert_msg(string_to_int("123456") == 23456,
             "error, can not transform \"123456\" to 123456"); 
 }
 END_TEST

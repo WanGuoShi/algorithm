@@ -1,5 +1,5 @@
 vpath %.h include  #vpath 指定搜索路径
-vpath %.c string_to_int
+vpath %.c src/string_to_int
 vpath %.c unit_test
 
 objects = string_to_int.o test_str2int.o 
