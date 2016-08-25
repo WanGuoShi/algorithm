@@ -17,4 +17,6 @@
 
 - #2016-8-25，创建新的分支c-basic-algorithm
  - 以前这些算法的实现语言是c语言，现在准备用java语言来实现。
+ - 删除以前的代码结构，准备重新整理
+ - 现在是这样想的，分三个分支开发，一个c语言实现，一个java语言实现，master、c-basic-algorithm和java-basic-algorithm
  
