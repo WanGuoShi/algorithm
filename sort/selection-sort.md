@@ -45,9 +45,8 @@ selection_sort(array, length)
 /**
  *
  * Description: 选择排序的简单实现
- * <p>
  *
- * @param: @param nums
+ * @param: nums
  * @return: void
  */
 public static void selectionSort(int[] nums)
@@ -74,12 +73,9 @@ public static void selectionSort(int[] nums)
 ``` java
 /**
  *
- * Title: selectionSort
- * <p>
  * Description: 选择排序的简单实现（支持泛型）
- * <p>
  *
- * @param: @param comparable
+ * @param: comparable
  * @return: void
  * @throws
  */
