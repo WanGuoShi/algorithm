@@ -45,9 +45,8 @@ insertion_sort(array, length)
 /**
  *
  * Description: 插入排序的简单实现
- * <p>
  *
- * @param: @param nums
+ * @param: nums
  * @return: void
  */
 public static void insertSort(int[] nums)
@@ -69,12 +68,9 @@ public static void insertSort(int[] nums)
 ``` java
 /**
  *
- * Title: insertSort
- * <p>
  * Description: 插入排序的简单实现（支持泛型）
- * <p>
  *
- * @param: @param nums
+ * @param: nums
  * @return: void
  * @throws
  */
@@ -96,3 +92,7 @@ public static <E extends Comparable<? super E>> void insertSort(
 ## 算法复杂度分析
 
 如果目标是把n个元素的序列升序排列，那么采用插入排序存在最好情况和最坏情况。最好情况就是，序列已经是升序排列了，在这种情况下，需要进行的比较操作需(n-1)次即可。最坏情况就是，序列是降序排列，那么此时需要进行的比较共有n(n-1)/2次。插入排序的赋值操作是比较操作的次数加上(n-1)次。平均来说插入排序算法复杂度为O(n2)。因而，插入排序不适合对于数据量比较大的排序应用。但是，如果需要排序的数据量很小，例如，量级小于千，那么插入排序还是一个不错的选择。 插入排序在工业级库中也有着广泛的应用，在STL的sort算法和stdlib的qsort算法中，都将插入排序作为快速排序的补充，用于少量元素的排序（通常为8个或以下）。
+
+## 参考文章
+
+- [插入排序](https://wikipedia.org/wiki/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F)
