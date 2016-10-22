@@ -1,17 +1,20 @@
 ## 归并排序算法
 
----
+## 概念
 
-### 概念
+> 归并排序（英语：Merge sort），是创建在归并操作上的一种有效的排序算法，效率为O(n log n)。
+**归并操作**（merge），也叫归并算法，指的是将两个已经排序的序列合并成一个序列的操作。归并排序算法依赖归并操作。
 
-#### 递归法
+![归并排序算法演示动画](http://img.blog.csdn.net/20160831212632531)
+
+## 递归法
 
 原理如下（假设序列共有n个元素）：
  1. 将序列每相邻两个数字进行归并操作，形成floor(n/2)个序列，排序后每个序列包含两个元素
  2. 将上述序列再次归并，形成floor(n/4)个序列，每个序列包含四个元素
  3. 重复步骤2，直到所有元素排序完毕
 
-#### 迭代法
+## 迭代法
 
  1. 申请空间，使其大小为两个已经排序序列之和，该空间用来存放合并后的序列
  2. 设定两个指针，最初位置分别为两个已经排序序列的起始位置
@@ -19,18 +22,17 @@
  4. 重复步骤3直到某一指针到达序列尾
  5. 将另一序列剩下的所有元素直接复制到合并序列尾
  
-### 代码实现（java）
+## 代码实现（java）
 
-#### 递归版
+### 递归版
 
 ``` java
 /**
  * 
- * @Title: mergeSort
  * @Description: 归并排序，递归版
- * @param: @param <E>
- * @param: @param m
- * @param: @return
+ *
+ * @param: <E>
+ * @param: m
  * @return: List<E>
  * @throws
  */
@@ -88,14 +90,14 @@ public static <E extends Comparable<? super E>> List<E> merge(List<E> left,
 }
 ```
 
-#### 迭代版
+### 迭代版
 
 ``` java
 /**
  * 
- * @Title: mergeSort
  * @Description: 归并排序，迭代版
- * @param: @param nums
+ *
+ * @param: nums
  * @return: void
  * @throws
  */
@@ -132,3 +134,11 @@ public static void mergeSort(int[] nums) {
 	result = nums;
 }
 ```
+
+## 算法复杂度分析
+
+比较操作的次数介于(n\*logn)/2(n log n)/2和n\*logn?n+1。 赋值操作的次数是 n\*logn。归并算法的空间复杂度为：O(n)。
+
+## 参考文章
+
+- [归并排序](https://wikipedia.org/wiki/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F)
