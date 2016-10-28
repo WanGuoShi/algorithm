@@ -20,13 +20,13 @@
  - 删除以前的代码结构，准备重新整理
  - 现在是这样想的，分三个分支开发，一个c语言实现，一个java语言实现，master、c-basic-algorithm和java-basic-algorithm
 - #2016-8-26，开始了常用算法的整理工作，目前已整理的排序算法如下：
- - [冒泡排序](https://github.com/crane-yuan/algorithm/tree/master/sort/bubble-sort.md)
- - [选择排序](https://github.com/crane-yuan/algorithm/tree/master/sort/selection-sort.md)
- - [插入排序](https://github.com/crane-yuan/algorithm/tree/master/sort/insert-sort.md)
- - [归并排序](https://github.com/crane-yuan/algorithm/tree/master/sort/merge-sort.md)
- - [希尔排序](https://github.com/crane-yuan/algorithm/tree/master/sort/shell-sort.md)
- - [快速排序](https://github.com/crane-yuan/algorithm/tree/master/sort/quick-sort.md)
- - [堆排序]  (https://github.com/crane-yuan/algorithm/tree/master/sort/heap-sort.md)
+ - [冒泡排序](sort/bubble-sort.md)
+ - [选择排序](sort/selection-sort.md)
+ - [插入排序](sort/insert-sort.md)
+ - [归并排序](sort/merge-sort.md)
+ - [希尔排序](sort/shell-sort.md)
+ - [快速排序](sort/quick-sort.md)
+ - [堆排序]  (sort/heap-sort.md)
 - #2016-9-7，优化排序算法的叙述，目前以优化的排序算法如下：
  - 冒泡排序
  - 选择排序
